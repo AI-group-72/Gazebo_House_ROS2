@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <style>
+      #video, #canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #canvas {
+        z-index: 1; /* Отображать холст поверх видео */
+      }
+    </style>
+  </head>
+  <body>
+    <video id="video" width="640" height="480" autoplay muted>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.2/dist/posenet.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
